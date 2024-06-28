@@ -7,7 +7,10 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://codeworks-4syk.onrender.com', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
 
 app.post('/execute-code', async (req, res) => {
     try {
