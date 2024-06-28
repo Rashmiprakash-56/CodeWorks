@@ -30,6 +30,8 @@ function CodeEditor() {
         input,
       });
 
+      if(!response) console.log("error");
+      console.log(response);
       setOutput(response.data.output);
     } catch (error) {
       console.error("Error running code:", error);
