@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://codeworks-4syk.onrender.com', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 

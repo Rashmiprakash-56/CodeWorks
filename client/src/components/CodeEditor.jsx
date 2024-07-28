@@ -27,7 +27,6 @@ function CodeEditor({code,setCode,input,setInput}) {
         code,
         input,
       });
-
       setOutput(response.data.output);
     } catch (error) {
       console.error("Error running code:", error);
