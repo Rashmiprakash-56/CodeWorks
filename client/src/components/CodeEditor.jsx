@@ -6,9 +6,7 @@ import loader from "../assets/180-ring-with-bg.svg";
 
 const api_url = import.meta.env.VITE_API_URL;
 
-function CodeEditor() {
-  const [code, setCode] = useState(initialSelected.demoCode);
-  const [input, setInput] = useState("");
+function CodeEditor({code,setCode,input,setInput}) {
   const [output, setOutput] = useState("Your output will be displayed here");
   const [selected, setSelected] = useState(initialSelected);
   const [fontSize, setFontSize] = useState(18);
@@ -50,8 +48,14 @@ function CodeEditor() {
     setCode(value);
   };
 
+  const handleReset = ()=>{
+      setCode(selected.demoCode);
+      setInput("");
+      setOutput("Your output will be displayed here");
+  }
+
   return (
-    <div className="w-screen min-h-screen h-dvh flex flex-col md:flex-row md:px-4 justify-center items-center">
+    <div className=" bg-gray-100 w-screen min-h-screen h-dvh flex flex-col md:flex-row md:px-4 justify-center items-center">
       <div className="flex flex-col justify-center p-3 h-5/6 w-full md:w-3/6">
         <div className="flex justify-between w-full ">
           <select
@@ -124,10 +128,10 @@ function CodeEditor() {
             {isLoading ? <img src={loader} alt="loader" /> : "RUN"}
           </button>
           <button
-            onClick={() => alert("Will be available Soon")}
+            onClick={handleReset}
             className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded transition duration-300 ease-in-out"
           >
-            SAVE
+           Reset
           </button>
         </div>
       </div>

@@ -15,6 +15,17 @@ body{
     font-family: Arial, monospace;
     font-size: 20px;
 }
+
+.markdown-content p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.markdown-content li {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .collapsed .CodeMirror-scroll{
   position: absolute ;
   overflow: hidden !important;

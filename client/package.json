@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.16.0",
     "@monaco-editor/react": "^4.6.0",
     "axios": "^1.7.2",
     "codemirror": "^5.65.16",
     "react": "^18.2.0",
     "react-codemirror2": "^8.0.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.23.1",
     "react-select": "^5.8.0"
   },
